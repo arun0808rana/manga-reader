@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+:root {
+  --PRIMARY: #0a0a0d;
+  --SECONDARY: #212129;
+  --TERTIARY: #4d5862;
+  --TEXT-ACTIVE: #e9eef2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* global css */
+input {
+  outline: none;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--PRIMARY);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hover-active:hover {
+  color: var(--TEXT-ACTIVE);
+}
+
+.active {
+  color: var(--TEXT-ACTIVE);
+}
+
+/* ================navbar css start================ */
+nav {
+  background-color: var(--SECONDARY);
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 1200px;
+  width: 100%;
+  height: 56px;
+  margin: auto;
+}
+.logo.link {
+  margin-right: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-lhs,
+.nav-rhs {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-light-toggle {
+  margin-left: 32px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--TERTIARY);
 }
+
+.dark-light-toggle:hover {
+  color: var(--TEXT-ACTIVE);
+}
+
+.link-container {
+  display: flex;
+  margin-left: 16px;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link {
+  padding: 8px;
+  margin: 8px;
+  display: block;
+  color: var(--TERTIARY);
+}
+
+.nav-link.active {
+  color: var(--TEXT-ACTIVE);
+}
+
+.nav-link:hover {
+  color: var(--TEXT-ACTIVE);
+}
+/* ================navbar css end================ */
+
+/* search bar css start */
+.nav-search-bar {
+  position: relative;
+}
+
+.nav-search-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--TERTIARY);
+}
+
+.nav-search-bar-input {
+  width: 240px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: var(--SECONDARY);
+  border: 2px solid var(--TERTIARY);
+  color: var(--TERTIARY);
+}
+
+.nav-search-bar-input:focus {
+  color: var(--TEXT-ACTIVE);
+}
+
+.nav-search-bar-input:focus + .nav-search-icon {
+  color: var(--TEXT-ACTIVE);
+}
+/* search bar css end */
+
+/* diffuse slider css start */
+.diffuse-slider {
+  width: 100%;
+  height: 512px;
+  background-color: var(--TERTIARY);
+  position: relative;
+  overflow: hidden;
+}
+
+.diffuse-blur-bg {
+  width: 100%;
+  height: 100%;
+  filter: blur(4px);
+}
+
+.diffuse-blur-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+}
+
+.diffuse-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--PRIMARY);
+  opacity: 0.6;
+}
+
+.diffuse-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--TEXT-ACTIVE);
+}
+/* diffuse slider css end */
