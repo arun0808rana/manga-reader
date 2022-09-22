@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div className="navbar">
         <div className="nav-lhs">
-          <Link className="nav-link link logo">Logo</Link>
+          <Link className="nav-link link logo active">SHONEN DASH.</Link>
           <div className="link-container">
             <Link className="nav-link link active">Manga</Link>
             <Link className="nav-link link">Anime</Link>
@@ -18,7 +18,7 @@ function Navbar() {
         <div className="nav-rhs">
           <SearchBar />
           <div className="dark-light-toggle">
-            <i class="fa fa-moon-o" aria-hidden="true"></i>
+            <i className="fa fa-moon-o" aria-hidden="true"></i>
           </div>
         </div>
       </div>
