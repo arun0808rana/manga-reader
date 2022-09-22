@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useGetSliderDataQuery } from "../../app/services/diffuseApiSlice";
 
 function DiffuseSlider() {
+  // hooks
+  const dispatch = useDispatch();
+
+  // rtk actions
+  const { getSliderData } = useGetSliderDataQuery();
+
   // local states
   const [sliderCollection, setSliderCollection] = useState([
     {
@@ -18,12 +26,12 @@ function DiffuseSlider() {
   const [currentSlide, setCurrentSlide] = useState(sliderCollection[0]);
   const [currSlideIdx, setCurrSlideIdx] = useState(0);
 
-  //   functions
+  //   handlers
+
+  // fetch slider data
   const fetchMedia = async () => {
-    const res = await fetch("http://localhost:3004/data").then((res) =>
-      res.json()
-    );
     // console.log("res", res);
+    dispatch(getSliderData());
     setSliderCollection(res.sliderData);
     return res.sliderData;
   };

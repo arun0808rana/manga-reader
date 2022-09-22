@@ -6,7 +6,7 @@ const baseQuery = fetchBaseQuery({
   baseUrl: '/',
   prepareHeaders: (headers, { getState }) => {
     // By default, if we have a token in the store, let's use that for authenticated requests
-    const token = getState().auth.token
+    const token = getState().auth.token;
     if (token) {
       headers.set('authentication', `Bearer ${token}`)
     }
@@ -14,7 +14,29 @@ const baseQuery = fetchBaseQuery({
   },
 })
 
-const baseQueryWithRetry = retry(baseQuery, { maxRetries: 6 })
+// similar to axios interceptors for refreshing tokens
+const baseQueryWithReauth = async (args, api, extraOptions) => {
+  let result = await baseQuery(args, api, extraOptions);
+
+  if (result?.error?.originalStatus === 403) {
+    console.log('sending refresh token');
+    // sending refresh token to get new access token
+    const refreshResult = await baseQuery('/refresh', api, extraOptions);
+    console.log(refreshResult, 'resfresh token');
+
+    // setting credentials
+    if (refreshResult?.data) {
+      const user = api.getState().auth.user;
+      // store the new refresh token
+      api.dispatch(setCredentials({ ...refreshResult.data, user }));
+      // retry the original query with new access token
+      result = await baseQuery(args, api, extraOptions);
+    } else {
+      api.dispatch(logOut());
+    }
+  }
+  return result;
+}
 
 /**
  * Create a base API to inject endpoints into elsewhere.
@@ -34,7 +56,7 @@ export const api = createApi({
   /**
    * A bare bones base query would just be `baseQuery: fetchBaseQuery({ baseUrl: '/' })`
    */
-  baseQuery: baseQueryWithRetry,
+  baseQuery: baseQueryWithReauth,
   /**
    * Tag types must be defined in the original API definition
    * for any tags that would be provided by injected endpoints
@@ -48,8 +70,6 @@ export const api = createApi({
   endpoints: () => ({}),
 })
 
-export const enhancedApi = api.enhanceEndpoints({
-  endpoints: () => ({
-    getPost: () => 'test',
-  }),
-})
+// export const enhancedApi = api.enhanceEndpoints({
+//   endpoints: () => ({}),
+// })
