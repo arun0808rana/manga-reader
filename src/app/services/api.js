@@ -1,15 +1,14 @@
-import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
-import { RootState } from '../store'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // Create our baseQuery instance
 const baseQuery = fetchBaseQuery({
-  baseUrl: '/',
+  baseUrl: 'http://localhost:3004/',
   prepareHeaders: (headers, { getState }) => {
     // By default, if we have a token in the store, let's use that for authenticated requests
-    const token = getState().auth.token;
-    if (token) {
-      headers.set('authentication', `Bearer ${token}`)
-    }
+    // const token = getState().auth.token;
+    // if (token) {
+    //   headers.set('authentication', `Bearer ${token}`)
+    // }
     return headers
   },
 })
@@ -28,11 +27,13 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
     if (refreshResult?.data) {
       const user = api.getState().auth.user;
       // store the new refresh token
-      api.dispatch(setCredentials({ ...refreshResult.data, user }));
+      // uncomment this
+      // api.dispatch(setCredentials({ ...refreshResult.data, user }));
       // retry the original query with new access token
       result = await baseQuery(args, api, extraOptions);
     } else {
-      api.dispatch(logOut());
+      // uncomment this
+      // api.dispatch(logOut());
     }
   }
   return result;

@@ -6,36 +6,15 @@ function DiffuseSlider() {
   // hooks
   const dispatch = useDispatch();
 
-  // rtk actions
-  const { getSliderData } = useGetSliderDataQuery();
+  // rtk api
+  const { data: sliderData } = useGetSliderDataQuery();
 
   // local states
-  const [sliderCollection, setSliderCollection] = useState([
-    {
-      id: "10",
-      mediaName: "Bleach",
-      language: "EN",
-      chapterNo: "101",
-      mediaType: "manga",
-      description: "lorem ipsum",
-      slideUrl:
-        "https://img.mreadercdn.com/_r/500x800/100/9a/66/9a663ccb11437b3eef4e6aa677f6b036/9a663ccb11437b3eef4e6aa677f6b036.jpg",
-    },
-  ]);
-
-  const [currentSlide, setCurrentSlide] = useState(sliderCollection[0]);
+  const [sliderCollection, setSliderCollection] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState({});
   const [currSlideIdx, setCurrSlideIdx] = useState(0);
 
   //   handlers
-
-  // fetch slider data
-  const fetchMedia = async () => {
-    // console.log("res", res);
-    dispatch(getSliderData());
-    setSliderCollection(res.sliderData);
-    return res.sliderData;
-  };
-
   const transistSlideNext = () => {
     const currentSlideIndex = sliderCollection.findIndex(
       (slide) => currentSlide?.id == slide?.id
@@ -67,8 +46,6 @@ function DiffuseSlider() {
 
   //   effects
   useEffect(() => {
-    // fetching slider data
-    let res = fetchMedia();
     //   slinding time in milli seconds
     let TRANSITION_TIME = 2500;
 
@@ -87,12 +64,21 @@ function DiffuseSlider() {
   }, []);
 
   useEffect(() => {
-    setCurrentSlide(sliderCollection[currSlideIdx % sliderCollection.length]);
+    if (sliderCollection?.length) {
+      setCurrentSlide(
+        sliderCollection[currSlideIdx % sliderCollection?.length]
+      );
+    }
   }, [currSlideIdx]);
 
   useEffect(() => {
     console.log("sliderCollection", sliderCollection);
   }, [sliderCollection]);
+
+  useEffect(() => {
+    setSliderCollection(sliderData?.sliderData);
+    setCurrentSlide(sliderData?.sliderData[0])
+  }, [sliderData]);
 
   return (
     <div className="diffuse-slider">
