@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import DiffuseSlider from "../../reusablesComponents/diffuseSlider/DiffuseSlider";
 import CategoryPill from "../../reusablesComponents/category/CategoryPill";
+import Carousel from "../../reusablesComponents/carousel/Carousel";
+import { useGetSliderDataQuery } from "../../app/services/diffuseApiSlice";
+import LatestUpdates from "./LatestUpdates";
 
 function Home() {
   const [categories, setCategories] = useState([
@@ -17,6 +20,7 @@ function Home() {
     "Mecha",
     "+More",
   ]);
+  const { data: sliderData } = useGetSliderDataQuery();
   return (
     <div className="home">
       <div className="categories-strip">
@@ -27,6 +31,19 @@ function Home() {
         })}
       </div>
       <DiffuseSlider />
+      <div className="recommended-carousel">
+        <Carousel
+          heading={"Recommended"}
+          slideingItems={sliderData?.sliderData}
+        />
+      </div>
+      <LatestUpdates />
+      <div className="completed-carousel">
+        <Carousel
+          heading={"Completed"}
+          slideingItems={sliderData?.sliderData}
+        />
+      </div>
     </div>
   );
 }

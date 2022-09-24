@@ -7,9 +7,14 @@
   --TEXT-DIM-ACTIVE: #ddd;
   --TEXT-ACTIVE: #e9eef2;
   --CHATAK: #5f25a6;
+  --CHATAK-ACTIVE: #b578ff;
+  --MAX-WIDTH: calc(1440px - 32px);
 }
 
 /* global css */
+* {
+  box-sizing: border-box;
+}
 input,
 button {
   outline: none;
@@ -30,8 +35,9 @@ body {
 
 .home {
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--MAX-WIDTH);
   margin: auto;
+  padding: 0 16px;
 }
 
 .hover-active:hover {
@@ -132,7 +138,7 @@ nav {
   padding-left: 8px;
   padding-right: 10px;
   background-color: transparent;
-  border: 2px solid var(--SECONDARY);
+  border: 2px dashed var(--SECONDARY);
   color: var(--TERTIARY);
 }
 
@@ -243,6 +249,7 @@ nav {
 /* diffuse slider css end */
 
 /* category pill css start */
+
 .categories-strip {
   position: sticky;
   top: 80px;
@@ -269,3 +276,94 @@ nav {
   margin-bottom: 12px;
 }
 /* category pill css end */
+
+/* carousel css start */
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 32px;
+}
+.carousel-heading-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel-heading {
+  color: var(--TEXT-DIM-ACTIVE);
+}
+
+.carousel-slider {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.carousel-slider::-webkit-scrollbar {
+  height: 0;
+}
+
+.carousel-slide {
+  height: 240px;
+  margin-right: 16px;
+  cursor: pointer;
+  /* transform: translateX(-100%); */
+}
+
+.carousel-btns {
+  display: flex;
+}
+.carousel-btns.fa-chevron-left,
+.carousel-btns.fa-chevron-right {
+  color: var(--TEXT-DIM-ACTIVE);
+  margin-left: 16px;
+  cursor: pointer;
+  font-size: 24px;
+}
+/* carousel css end */
+
+/* latest updates css start */
+.latest-updates {
+  color: var(--TEXT-DIM-ACTIVE);
+  margin: 64px 0 0;
+}
+.latest-updates-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.latest-updates-heading {
+  color: var(--TEXT-DIM-ACTIVE);
+}
+.update-item {
+  display: flex;
+  margin: 0 16px 16px 0;
+  background-color: var(--SECONDARY);
+  padding: 16px;
+  border-radius: 6px;
+}
+.update-item-lhs.img {
+  height: 200px;
+  margin-right: 0;
+}
+
+.update-heading {
+  margin-top: 0;
+}
+.update-item-lhs {
+  margin-right: 16px;
+}
+.update-item-genere {
+  font-size: 14px;
+  margin: -8px 0 24px;
+}
+.update-items-chapters.chapter {
+  color: var(--CHATAK-ACTIVE);
+  display: block;
+  margin: 16px 0;
+}
+
+.update-chapter-separator {
+  border-bottom: 1px dashed var(--TERTIARY);
+}
+
+/* latest updates css end */

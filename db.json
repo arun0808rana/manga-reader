@@ -39,6 +39,114 @@
         "mediaType": "manga",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
         "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/a2/ad/a2ad0fbfb5c3ce048a8315e445ed3cdd/a2ad0fbfb5c3ce048a8315e445ed3cdd.jpg"
+      },
+      {
+        "id": "14",
+        "mediaName": "Bleach",
+        "language": "EN",
+        "chapterNo": "101",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/9a/66/9a663ccb11437b3eef4e6aa677f6b036/9a663ccb11437b3eef4e6aa677f6b036.jpg"
+      },
+      {
+        "id": "15",
+        "mediaName": "Naruto",
+        "language": "EN",
+        "chapterNo": "50",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/58/28/58288b6e441e3be1028a2c8d7428bd8b/58288b6e441e3be1028a2c8d7428bd8b.jpg"
+      },
+      {
+        "id": "16",
+        "mediaName": "One Piece",
+        "language": "EN",
+        "chapterNo": "34",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/5f/7b/5f7bac5d995bb04309cfa180618e62b3/5f7bac5d995bb04309cfa180618e62b3.jpg"
+      },
+      {
+        "id": "17",
+        "mediaName": "Classroom of the elite",
+        "language": "EN",
+        "chapterNo": "122",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/a2/ad/a2ad0fbfb5c3ce048a8315e445ed3cdd/a2ad0fbfb5c3ce048a8315e445ed3cdd.jpg"
+      },
+      {
+        "id": "18",
+        "mediaName": "Bleach",
+        "language": "EN",
+        "chapterNo": "101",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/9a/66/9a663ccb11437b3eef4e6aa677f6b036/9a663ccb11437b3eef4e6aa677f6b036.jpg"
+      },
+      {
+        "id": "19",
+        "mediaName": "Naruto",
+        "language": "EN",
+        "chapterNo": "50",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/58/28/58288b6e441e3be1028a2c8d7428bd8b/58288b6e441e3be1028a2c8d7428bd8b.jpg"
+      },
+      {
+        "id": "20",
+        "mediaName": "One Piece",
+        "language": "EN",
+        "chapterNo": "34",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/5f/7b/5f7bac5d995bb04309cfa180618e62b3/5f7bac5d995bb04309cfa180618e62b3.jpg"
+      },
+      {
+        "id": "21",
+        "mediaName": "Classroom of the elite",
+        "language": "EN",
+        "chapterNo": "122",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/a2/ad/a2ad0fbfb5c3ce048a8315e445ed3cdd/a2ad0fbfb5c3ce048a8315e445ed3cdd.jpg"
+      },
+      {
+        "id": "22",
+        "mediaName": "Bleach",
+        "language": "EN",
+        "chapterNo": "101",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/9a/66/9a663ccb11437b3eef4e6aa677f6b036/9a663ccb11437b3eef4e6aa677f6b036.jpg"
+      },
+      {
+        "id": "23",
+        "mediaName": "Naruto",
+        "language": "EN",
+        "chapterNo": "50",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/58/28/58288b6e441e3be1028a2c8d7428bd8b/58288b6e441e3be1028a2c8d7428bd8b.jpg"
+      },
+      {
+        "id": "24",
+        "mediaName": "One Piece",
+        "language": "EN",
+        "chapterNo": "34",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/5f/7b/5f7bac5d995bb04309cfa180618e62b3/5f7bac5d995bb04309cfa180618e62b3.jpg"
+      },
+      {
+        "id": "25",
+        "mediaName": "Classroom of the elite",
+        "language": "EN",
+        "chapterNo": "122",
+        "mediaType": "manga",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officiis officia impedit incidunt cum! Cumque, ad quae blanditiis facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis amet veritatis tempora?",
+        "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/a2/ad/a2ad0fbfb5c3ce048a8315e445ed3cdd/a2ad0fbfb5c3ce048a8315e445ed3cdd.jpg"
       }
     ]
   }
