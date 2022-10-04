@@ -3,7 +3,6 @@ import React from 'react'
 function MangaViewer() {
   return (
     <div className='manga-viewer'>
-      <div className="manga-viewer-details-panel">1</div>
       <div className="manga-viewer-chapters-volumes-panel">2</div>
       <div className="manga-viewer-panel">3</div>
     </div>

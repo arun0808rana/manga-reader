@@ -54,10 +54,11 @@ function MostViewed() {
                     />
                   </div>
                   <div className="most-viewed-manga-strip-details">
-                    <h3 className="most-viewed-manga-strip-name">One Piece</h3>
+                    <Link className="most-viewed-manga-strip-name">One Piece</Link>
                     <div className="most-viewed-sub-text">
                       <div className="most-viewed-languages">EN/FR/JA</div>
-                      <div className="most-viewed-genre">Action, Adventure</div>
+                      <span className="ml-8">|</span>
+                      <div className="most-viewed-genre ml-8">Action, Adventure</div>
                     </div>
                     <div className="most-viewed-chapter-updates">
                       <Link to="manga-view">

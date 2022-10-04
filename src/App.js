@@ -6,6 +6,7 @@ import MangaViewer from './features/mangaViewer/MangaViewer';
 import CategoryPills from './reusablesComponents/category/CategoryPills';
 import Footer from './reusablesComponents/footer/Footer';
 import Navbar from './reusablesComponents/navbar/Navbar';
+import MangaDetails from './features/mangaDetails/MangaDetails';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="manga-view" element={<MangaViewer />} />
-        {/* <Route path="invoices" element={<Invoices />} /> */}
+        <Route path="manga-details" element={<MangaDetails />} />
       </Routes>
       <Footer />
     </>
