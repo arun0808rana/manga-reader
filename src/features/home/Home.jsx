@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import DiffuseSlider from "../../reusablesComponents/diffuseSlider/DiffuseSlider";
-import CategoryPill from "../../reusablesComponents/category/CategoryPill";
 import Carousel from "../../reusablesComponents/carousel/Carousel";
 import { useGetSliderDataQuery } from "../../app/services/diffuseApiSlice";
 import LatestUpdates from "./LatestUpdates";
+import MostViewed from "./MostViewed";
 
 function Home() {
   const [categories, setCategories] = useState([
@@ -23,13 +23,7 @@ function Home() {
   const { data: sliderData } = useGetSliderDataQuery();
   return (
     <div className="home">
-      <div className="categories-strip">
-        {categories.map((category) => {
-          return (
-            <CategoryPill key={`category__${category}`} category={category} />
-          );
-        })}
-      </div>
+
       <DiffuseSlider />
       <div className="recommended-carousel">
         <Carousel
@@ -37,7 +31,10 @@ function Home() {
           slideingItems={sliderData?.sliderData}
         />
       </div>
-      <LatestUpdates />
+      <div className="latest-updates-cum-most-viewed">
+        <LatestUpdates />
+        <MostViewed />
+      </div>
       <div className="completed-carousel">
         <Carousel
           heading={"Completed"}

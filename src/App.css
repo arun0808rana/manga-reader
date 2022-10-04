@@ -138,7 +138,7 @@ nav {
   padding-left: 8px;
   padding-right: 10px;
   background-color: transparent;
-  border: 2px dashed var(--SECONDARY);
+  border: 2px solid var(--SECONDARY);
   color: var(--TERTIARY);
 }
 
@@ -158,7 +158,6 @@ nav {
   background-color: var(--TERTIARY);
   position: relative;
   overflow: hidden;
-  margin-top: 16px;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -259,6 +258,9 @@ nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: var(--MAX-WIDTH);
+  margin: auto;
+  padding: 0 16px;
 }
 .category-pill {
   padding: 0 10px;
@@ -273,7 +275,7 @@ nav {
   background: var(--SECONDARY);
   text-decoration: none;
   margin-right: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 /* category pill css end */
 
@@ -322,10 +324,17 @@ nav {
 }
 /* carousel css end */
 
+/* latest updates cum most viewed start */
+.latest-updates-cum-most-viewed {
+  display: flex;
+}
+/* latest updates cum most viewed end */
+
 /* latest updates css start */
 .latest-updates {
   color: var(--TEXT-DIM-ACTIVE);
   margin: 64px 0 0;
+  width: 70%;
 }
 .latest-updates-body {
   display: flex;
@@ -356,10 +365,13 @@ nav {
   font-size: 14px;
   margin: -8px 0 24px;
 }
-.update-items-chapters.chapter {
+.update-items-chapters.chapter,
+.most-viewed-chapter-updates > a {
   color: var(--CHATAK-ACTIVE);
   display: block;
   margin: 16px 0;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .update-chapter-separator {
@@ -367,3 +379,82 @@ nav {
 }
 
 /* latest updates css end */
+
+/* most viewed css start */
+.most-viewed {
+  width: 30%;
+  padding: auto 16px;
+  margin: 64px 0 0;
+  color: var(--TEXT-DIM-ACTIVE);
+}
+
+.most-viewed-body {
+}
+
+.most-viewed-time-strip {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.most-viewed-time-strip-item {
+  width: 33%;
+  height: 48px;
+  background-color: var(--SECONDARY);
+  margin-bottom: 16px;
+  border-radius: 6px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.most-viewed-time-strip-item:last-child {
+  margin-right: 0;
+}
+
+.most-viewed-time-strip-item[data-active="true"] {
+  background-color: var(--CHATAK);
+}
+
+.most-viewed-manga-strip-name {
+  margin: 0 0 8px;
+}
+
+.most-viewed-manga-strip-lhs {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.most-view-manga-strip:nth-child(odd) {
+  background-color: var(--SECONDARY);
+  padding: 8px 0 0 8px;
+}
+
+.most-viewed-manga-strip-details {
+  padding-left: 16px;
+}
+
+.most-viewed-manga-strip-lhs-img {
+  height: 72px;
+  width: auto;
+}
+
+.most-viewed-sub-text {
+  display: flex;
+  font-size: 14px;
+}
+
+.most-viewed-chapter-updates > a {
+  margin: 8px 0 16px;
+}
+/* most viewed css end */
+
+
+/* manga viewer css start */
+.manga-viewer{
+  max-width: var(--MAX-WIDTH);
+  padding: 0 16px;
+  margin: auto;
+}
+/* manga viewer css end */
