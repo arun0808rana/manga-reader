@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <div className="navbar">
         <div className="nav-lhs">
-          <Link className="nav-link link logo active">SHONEN DASH.</Link>
+          <Link to="/" className="nav-link link logo active">SHONEN DASH.</Link>
           <div className="link-container">
             <Link className="nav-link link active">Manga</Link>
             <Link className="nav-link link">Anime</Link>

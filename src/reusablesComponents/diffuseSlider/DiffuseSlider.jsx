@@ -47,7 +47,7 @@ function DiffuseSlider() {
   //   effects
   useEffect(() => {
     //   slinding time in milli seconds
-    let TRANSITION_TIME = 2500;
+    let TRANSITION_TIME = 5000;
 
     //   changing slides every 3 seconds
     let interID = setInterval(() => {
