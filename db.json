@@ -149,5 +149,13 @@
         "slideUrl": "https://img.mreadercdn.com/_r/500x800/100/a2/ad/a2ad0fbfb5c3ce048a8315e445ed3cdd/a2ad0fbfb5c3ce048a8315e445ed3cdd.jpg"
       }
     ]
-  }
+  },
+  "manga_view_chapters":[
+    {
+      "name": "Blue Lock",
+      "chapters":[
+        "https://i0.wp.com/mangaowl.io/wp-content/uploads/WP-manga/data/manga_62f42bda38b7f/ch-001/j001.jpg"
+      ]
+    }
+  ]
 }

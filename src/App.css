@@ -36,7 +36,7 @@
 #root,
 html,
 body {
-  height: 100%;
+  height: fit-content;
 }
 
 #root > * {
@@ -466,11 +466,10 @@ nav {
   border-radius: 6px;
 }
 
-
 .most-viewed-manga-strip-details {
   padding-left: 16px;
 }
-.most-viewed-manga-strip-lhs-img-container{
+.most-viewed-manga-strip-lhs-img-container {
   height: fit-content;
 }
 .most-viewed-manga-strip-lhs-img {
@@ -484,12 +483,12 @@ nav {
   margin-bottom: 16px;
 }
 
-.ml-8{
+.ml-8 {
   padding-left: 8px;
   color: var(--SECONDARY);
 }
 
-.most-viewed-genre{
+.most-viewed-genre {
   color: var(--TEXT-DIM-ACTIVE);
 }
 
@@ -503,7 +502,8 @@ nav {
   max-width: var(--MAX-WIDTH);
   margin: auto;
   display: flex;
-  height: fit-content;
+  /* height: fit-content; */
+  /* width: 100%; */
 }
 
 .manga-viewer-details-panel {
@@ -518,6 +518,33 @@ nav {
 
 .manga-viewer-panel {
   width: 100%;
+}
+
+.manga-viewer-current-page {
+  width: 100%;
+  height: auto;
+}
+
+.manga-viewer-controls {
+  display: flex;
+  color: var(--TEXT-DIM-ACTIVE);
+  justify-content: flex-end;
+  /* position: relative; */
+}
+.manga-viewer-controls-prev {
+  position: fixed;
+  bottom: 32px;
+  right: 160px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.manga-viewer-controls-next{
+  position: fixed;
+  bottom: 32px;
+  right: 120px;
+  font-size: 32px;
+  cursor: pointer;
 }
 /* manga viewer css end */
 
