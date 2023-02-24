@@ -1,5 +1,5 @@
 const fs = require('fs')
-let data = fs.readFileSync('./src/features/navbar/Navbar.jsx', 'utf-8');
+let data = fs.readFileSync('./src/reusablesComponents/navbar/Navbar.jsx', 'utf-8');
 let tempBuffer = '';
 let word = '';
 let newData = '';

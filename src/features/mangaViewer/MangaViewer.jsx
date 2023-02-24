@@ -18,19 +18,20 @@ function MangaViewer() {
       {/* <div className="manga-viewer-chapters-volumes-panel">2</div> */}
       <div className="manga-viewer-panel">
         <img
-          src={'https://i0.wp.com/mangaowl.io/wp-content/uploads/WP-manga/data/manga_62f42bda38b7f/ch-001/j001.jpg'}
+          src={demoImg}
           alt=""
           className="manga-viewer-current-page"
         />
         <div className="manga-viewer-controls">
           <div className="manga-viewer-controls-prev">
-            <i class="fa fa-arrow-left" aria-hidden="true" onClick={nextChapter}></i>
+            <i className="fa fa-arrow-left" aria-hidden="true" onClick={nextChapter}></i>
           </div>
           <div className="manga-viewer-controls-next">
-            <i class="fa fa-arrow-right" aria-hidden="true" onClick={prevChapter}></i>
+            <i className="fa fa-arrow-right" aria-hidden="true" onClick={prevChapter}></i>
           </div>
         </div>
       </div>
+      <div className="blur-box"></div>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Footer() {
     <footer>
         <Link className="nav-link link logo active">SHONEN DASH.</Link>
         <div className="love-website">
-            Made With <i class="fa fa-heart" aria-hidden="true"></i>
+            Made With <i className="fa fa-heart" aria-hidden="true"></i>
         </div>
     </footer>
   )
