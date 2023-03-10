@@ -61,7 +61,7 @@ function MostViewed() {
                       <div className="most-viewed-genre ml-8">Action, Adventure</div>
                     </div>
                     <div className="most-viewed-chapter-updates">
-                      <Link to="manga-view">
+                      <Link to={`manga-view/${555}`}>
                         <span></span>
                         Chap 1004
                       </Link>

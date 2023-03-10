@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { useGetSliderDataQuery } from "../../app/services/diffuseApiSlice";
 
 function DiffuseSlider() {
@@ -98,7 +99,7 @@ function DiffuseSlider() {
             facere obcaecati sequi ipsam aperiam recusandae dolore dicta debitis
             amet veritatis tempora?
           </div>
-          <button className="diffuse-read-now-btn">Read Now</button>
+          <Link to={`manga-view/${235}`} className="diffuse-read-now-btn">Read Now</Link>
           <div className="diffuse-navigation">
             <button className="diffuse-nav-btn">
               <i

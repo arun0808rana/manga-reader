@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function CategoryPills() {
+  const route = useLocation().pathname;
+
   const [categories, setCategories] = useState([
     "All",
     "Action",
@@ -18,7 +20,7 @@ function CategoryPills() {
     "+More",
   ]);
   return (
-    <div className="categories-strip">
+    <div className={route.includes('/manga-view')  ? "categories-strip" : "categories-strip-sticky"}>
       {categories.map((category) => {
         return (
           <Link key={`category__${category}`} className="category-pill">

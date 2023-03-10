@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SLIDE_PIXELS = 150;
 
@@ -54,7 +55,7 @@ function Carousel({ heading, slideingItems = [] }) {
               className="carousel-slide-container"
               key={`carousel-slide-${index}-${slide?.id}`}
             >
-              <img className="carousel-slide" src={slide?.slideUrl} alt="" />
+              <Link to={`/manga-view/${1234}`}><img className="carousel-slide" src={slide?.slideUrl} alt="" /></Link>
             </div>
           );
         })}

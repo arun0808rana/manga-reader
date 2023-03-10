@@ -80,8 +80,6 @@ body {
 
 /* ================navbar css start================ */
 nav {
-  /* background-color: var(--SECONDARY); */
-  position: sticky;
   top: 0;
   z-index: 1;
   background-color: var(--PRIMARY);
@@ -97,6 +95,11 @@ nav {
   margin: auto;
   padding: 0 16px;
 }
+
+.navbar-sticky{
+  position: sticky;
+}
+
 .logo.link {
   margin-right: 40px;
   font-weight: bold;
@@ -237,6 +240,9 @@ nav {
   max-width: 560px;
 }
 .diffuse-read-now-btn {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
   line-height: 40px;
   padding: 0 20px;
   border-radius: 4px;
@@ -281,6 +287,16 @@ nav {
 /* category pill css start */
 
 .categories-strip {
+  background-color: var(--PRIMARY);
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: var(--MAX-WIDTH);
+  margin: auto;
+}
+
+.categories-strip-sticky {
   position: sticky;
   top: 80px;
   z-index: 1;
@@ -292,6 +308,7 @@ nav {
   max-width: var(--MAX-WIDTH);
   margin: auto;
 }
+
 .category-pill {
   padding: 0 10px;
   min-width: 40px;

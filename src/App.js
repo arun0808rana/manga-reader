@@ -15,7 +15,7 @@ function App() {
       <CategoryPills />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="manga-view" element={<MangaViewer />} />
+        <Route path="manga-view/:id" element={<MangaViewer />} />
         <Route path="manga-details" element={<MangaDetails />} />
       </Routes>
       <Footer />

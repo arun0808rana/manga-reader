@@ -29,7 +29,7 @@ function LatestUpdates() {
                           key={`update-chapter-${index}`}
                           className="update-chapter-links"
                         >
-                          <Link className="update-items-chapters chapter">
+                          <Link className="update-items-chapters chapter" to={`manga-view/${999}`}>
                             Chap 66 [EN]
                           </Link>
                           <div
